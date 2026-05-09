@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>coursewindow</class>
+ <widget class="QWidget" name="coursewindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Langora — Courses</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#coursewindow { background-color: #050810; }</string>
+  </property>
+  <widget class="QFrame" name="topbar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QFrame#topbar {
+    background-color: #070b14;
+    border-bottom: 1px solid #0f1629;
+}
+    </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <widget class="QPushButton" name="pushButton_back">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>14</y>
+      <width>100</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background: transparent;
+    color: #3b82f6;
+    border: 1px solid #1e3a5f;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: #070f24;
+    border-color: #1d4ed8;
+}
+     </string>
+    </property>
+    <property name="text">
+     <string>← Back</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_title">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>14</y>
+      <width>400</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #e2e8f0; font-size: 18px; font-weight: bold; background: transparent; }</string>
+    </property>
+    <property name="text">
+     <string>Programming Courses</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_userinfo">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>14</y>
+      <width>220</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #334155; font-size: 12px; background: transparent; }</string>
+    </property>
+    <property name="text">
+     <string>Level 1  |  0 XP</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="filterbar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>60</y>
+     <width>1000</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QFrame#filterbar {
+    background-color: #070b14;
+    border-bottom: 1px solid #0a0f1e;
+}
+    </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <widget class="QLabel" name="label_filter">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>40</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #334155; font-size: 11px; background: transparent; }</string>
+    </property>
+    <property name="text">
+     <string>Filter:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_filter_all">
+    <property name="geometry">
+     <rect>
+      <x>66</x>
+      <y>10</y>
+      <width>60</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background: #0d1f3c;
+    color: #60a5fa;
+    border: 1px solid #1d4ed8;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: bold;
+}
+QPushButton:hover { background: #0f2448; }
+     </string>
+    </property>
+    <property name="text">
+     <string>All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_filter_cpp">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background: transparent;
+    color: #334155;
+    border: 1px solid #0f1629;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: #0d1f3c;
+    color: #60a5fa;
+    border-color: #1d4ed8;
+}
+     </string>
+    </property>
+    <property name="text">
+     <string>C++</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_filter_python">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background: transparent;
+    color: #334155;
+    border: 1px solid #0f1629;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: #0d1f3c;
+    color: #60a5fa;
+    border-color: #1d4ed8;
+}
+     </string>
+    </property>
+    <property name="text">
+     <string>Python</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_count">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>14</y>
+      <width>160</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #1e3a5f; font-size: 11px; background: transparent; }</string>
+    </property>
+    <property name="text">
+     <string>8 courses available</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>112</y>
+     <width>1000</width>
+     <height>568</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QScrollArea {
+    background-color: #050810;
+    border: none;
+}
+QScrollBar:vertical {
+    background: #070b14;
+    width: 6px;
+    border-radius: 3px;
+}
+QScrollBar::handle:vertical {
+    background: #0f1629;
+    border-radius: 3px;
+    min-height: 20px;
+}
+QScrollBar::handle:vertical:hover { background: #1d4ed8; }
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical { height: 0px; }
+    </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::NoFrame</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1000</width>
+      <height>568</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget { background-color: #050810; }</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

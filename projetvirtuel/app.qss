@@ -1,0 +1,188 @@
+/* ── Global ── */
+QWidget {
+    background-color: #0d1117;
+    color: #e6edf3;
+    font-family: "Segoe UI";
+    font-size: 13px;
+    border: none;
+}
+
+/* ── Main window & dialogs ── */
+QMainWindow, QDialog {
+    background-color: #0d1117;
+}
+
+/* ── Labels ── */
+QLabel {
+    color: #e6edf3;
+    background: transparent;
+}
+QLabel#label_welcome {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e6edf3;
+}
+QLabel#label_subtitle {
+    font-size: 12px;
+    color: #546e7a;
+}
+QLabel#label_appname {
+    font-size: 22px;
+    font-weight: bold;
+    color: #90caf9;
+    letter-spacing: 3px;
+}
+
+/* ── Line Edits (inputs) ── */
+QLineEdit {
+    background-color: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #e6edf3;
+    font-size: 14px;
+    selection-background-color: #1565c0;
+}
+QLineEdit:focus {
+    border: 1px solid #1976d2;
+}
+QLineEdit::placeholder {
+    color: #3d4f5a;
+}
+
+/* ── Primary Button ── */
+QPushButton {
+    background-color: #1565c0;
+    color: #e8f4fd;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #1976d2;
+}
+QPushButton:pressed {
+    background-color: #0d47a1;
+}
+QPushButton:disabled {
+    background-color: #0d2137;
+    color: #3d4f5a;
+}
+
+/* ── Secondary / Outline Button ── */
+QPushButton#btn_register,
+QPushButton#pushButton_register {
+    background-color: transparent;
+    color: #90caf9;
+    border: 1px solid #1565c0;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+QPushButton#btn_register:hover,
+QPushButton#pushButton_register:hover {
+    background-color: #0d2137;
+}
+
+/* ── Danger / Logout Button ── */
+QPushButton#pushButton_logout {
+    background-color: transparent;
+    color: #ef5350;
+    border: 1px solid #c62828;
+    border-radius: 8px;
+}
+QPushButton#pushButton_logout:hover {
+    background-color: #1a0505;
+}
+
+/* ── Progress Bar (XP bar) ── */
+QProgressBar {
+    background-color: #21262d;
+    border-radius: 4px;
+    border: none;
+    height: 6px;
+    text-align: center;
+    color: transparent;
+}
+QProgressBar::chunk {
+    background-color: #1976d2;
+    border-radius: 4px;
+}
+
+/* ── Frames used as cards ── */
+QFrame {
+    background-color: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 10px;
+}
+
+/* ── Scroll bars ── */
+QScrollBar:vertical {
+    background: #0d1117;
+    width: 6px;
+    border-radius: 3px;
+}
+QScrollBar::handle:vertical {
+    background: #21262d;
+    border-radius: 3px;
+    min-height: 20px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #1976d2;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical { height: 0px; }
+
+/* ── List Widget (course list etc.) ── */
+QListWidget {
+    background-color: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+}
+QListWidget::item {
+    padding: 10px 14px;
+    border-bottom: 1px solid #161b22;
+    color: #e6edf3;
+}
+QListWidget::item:selected {
+    background-color: #0d2137;
+    color: #90caf9;
+    border-left: 3px solid #1976d2;
+}
+QListWidget::item:hover {
+    background-color: #161b22;
+}
+
+/* ── Tab Widget ── */
+QTabBar::tab {
+    background: #161b22;
+    color: #546e7a;
+    padding: 8px 20px;
+    border-bottom: 2px solid transparent;
+}
+QTabBar::tab:selected {
+    color: #90caf9;
+    border-bottom: 2px solid #1976d2;
+    background: #0d1117;
+}
+QTabBar::tab:hover {
+    color: #90caf9;
+    background: #0d1f2d;
+}
+QTabWidget::pane {
+    border: 1px solid #21262d;
+    border-radius: 8px;
+}
+
+/* ── Message Box ── */
+QMessageBox {
+    background-color: #161b22;
+}
+QMessageBox QLabel {
+    color: #e6edf3;
+}
+QMessageBox QPushButton {
+    min-width: 80px;
+    padding: 8px 16px;
+}

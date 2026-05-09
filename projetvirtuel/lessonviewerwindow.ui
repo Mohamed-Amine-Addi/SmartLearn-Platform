@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>lessonviewerwindow</class>
+ <widget class="QWidget" name="lessonviewerwindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>900</width><height>680</height></rect></property>
+  <property name="windowTitle"><string>Langora — Lesson</string></property>
+  <property name="styleSheet"><string notr="true">QWidget#lessonviewerwindow{background-color:#050810;}</string></property>
+  <!-- TOP BAR -->
+  <widget class="QFrame" name="topbar">
+   <property name="geometry"><rect><x>0</x><y>0</y><width>900</width><height>64</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame#topbar{background-color:#070b14;border-bottom:1px solid #0f1629;}</string></property>
+   <property name="frameShape"><enum>QFrame::Shape::StyledPanel</enum></property>
+   <widget class="QPushButton" name="pushButton_back">
+    <property name="geometry"><rect><x>20</x><y>14</y><width>90</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QPushButton{background:transparent;color:#3b82f6;border:1px solid #1e3a5f;border-radius:8px;font-size:13px;font-weight:bold;}QPushButton:hover{background:#070f24;border-color:#1d4ed8;}</string></property>
+    <property name="text"><string>← Back</string></property>
+   </widget>
+   <widget class="QLabel" name="label_course_name">
+    <property name="geometry"><rect><x>130</x><y>14</y><width>500</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel{color:#e2e8f0;font-size:15px;font-weight:bold;background:transparent;}</string></property>
+    <property name="text"><string>Course Name</string></property>
+   </widget>
+   <widget class="QLabel" name="label_progress">
+    <property name="geometry"><rect><x>730</x><y>14</y><width>150</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel{color:#334155;font-size:12px;background:transparent;}</string></property>
+    <property name="text"><string>Lesson 1 / 8</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignVCenter</set></property>
+   </widget>
+  </widget>
+  <!-- PROGRESS BAR -->
+  <widget class="QFrame" name="prog_bg">
+   <property name="geometry"><rect><x>0</x><y>64</y><width>900</width><height>5</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame{background:#0f1629;border:none;}</string></property>
+  </widget>
+  <widget class="QFrame" name="prog_fill">
+   <property name="geometry"><rect><x>0</x><y>64</y><width>112</width><height>5</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame{background:#1d4ed8;border:none;}</string></property>
+  </widget>
+  <!-- LESSON TITLE -->
+  <widget class="QLabel" name="label_lesson_title">
+   <property name="geometry"><rect><x>30</x><y>84</y><width>840</width><height>36</height></rect></property>
+   <property name="styleSheet"><string notr="true">QLabel{color:#e2e8f0;font-size:20px;font-weight:bold;background:transparent;}</string></property>
+   <property name="text"><string>Lesson Title</string></property>
+  </widget>
+  <!-- SCROLL AREA WITH CONTENT -->
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry"><rect><x>0</x><y>130</y><width>900</width><height>470</height></rect></property>
+   <property name="styleSheet"><string notr="true">QScrollArea{background:#050810;border:none;}QScrollBar:vertical{background:#070b14;width:6px;border-radius:3px;}QScrollBar::handle:vertical{background:#1d4ed8;border-radius:3px;min-height:20px;}QScrollBar::add-line:vertical,QScrollBar::sub-line:vertical{height:0;}</string></property>
+   <property name="widgetResizable"><bool>true</bool></property>
+   <property name="frameShape"><enum>QFrame::Shape::NoFrame</enum></property>
+   <widget class="QWidget" name="scrollContents">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>898</width><height>468</height></rect></property>
+    <property name="styleSheet"><string notr="true">QWidget{background:#050810;}</string></property>
+    <widget class="QLabel" name="label_content">
+     <property name="geometry"><rect><x>20</x><y>16</y><width>858</width><height>436</height></rect></property>
+     <property name="styleSheet"><string notr="true">QLabel{color:#94a3b8;font-size:13px;font-family:"Consolas","Courier New",monospace;background:#0a0f1e;border:1px solid #0f1629;border-radius:10px;padding:20px;line-height:1.8;}</string></property>
+     <property name="text"><string>Loading lesson content...</string></property>
+     <property name="wordWrap"><bool>true</bool></property>
+     <property name="alignment"><set>Qt::AlignmentFlag::AlignTop|Qt::AlignmentFlag::AlignLeft</set></property>
+    </widget>
+   </widget>
+  </widget>
+  <!-- NAVIGATION BUTTONS -->
+  <widget class="QPushButton" name="pushButton_prev">
+   <property name="geometry"><rect><x>20</x><y>618</y><width>180</width><height>46</height></rect></property>
+   <property name="styleSheet"><string notr="true">QPushButton{background:transparent;color:#3b82f6;border:1px solid #1e3a5f;border-radius:10px;font-size:14px;font-weight:bold;}QPushButton:hover{background:#070f24;border-color:#1d4ed8;}QPushButton:disabled{color:#1e3a5f;border-color:#0a0f1e;}</string></property>
+   <property name="text"><string>← Previous</string></property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_next">
+   <property name="geometry"><rect><x>700</x><y>618</y><width>180</width><height>46</height></rect></property>
+   <property name="styleSheet"><string notr="true">QPushButton{background:#1d4ed8;color:#eff6ff;border:none;border-radius:10px;font-size:14px;font-weight:bold;}QPushButton:hover{background:#2563eb;}QPushButton:pressed{background:#1e40af;}</string></property>
+   <property name="text"><string>Next →</string></property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
