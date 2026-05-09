@@ -187,6 +187,6 @@ If you like this project:
 
 ## 🚀 “Learning Never Stops.”
 
-Made with ❤️ using Qt & C++
+Using Qt & C++
 
 </div>
