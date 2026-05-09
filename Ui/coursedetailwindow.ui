@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>coursedetailwindow</class>
+ <widget class="QWidget" name="coursedetailwindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>860</width><height>580</height></rect>
+  </property>
+  <property name="windowTitle"><string>Langora — Course</string></property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#coursedetailwindow { background-color: #050810; }</string>
+  </property>
+
+  <!-- TOP BAR -->
+  <widget class="QFrame" name="topbar">
+   <property name="geometry"><rect><x>0</x><y>0</y><width>860</width><height>64</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#topbar { background-color: #070b14; border-bottom: 1px solid #0f1629; }</string>
+   </property>
+   <property name="frameShape"><enum>QFrame::Shape::StyledPanel</enum></property>
+
+   <widget class="QPushButton" name="pushButton_back">
+    <property name="geometry"><rect><x>20</x><y>14</y><width>90</width><height>36</height></rect></property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton { background: transparent; color: #3b82f6; border: 1px solid #1e3a5f; border-radius: 8px; font-size: 13px; font-weight: bold; }
+QPushButton:hover { background: #070f24; border-color: #1d4ed8; }
+     </string>
+    </property>
+    <property name="text"><string>← Back</string></property>
+   </widget>
+
+   <widget class="QLabel" name="label_course_title">
+    <property name="geometry"><rect><x>130</x><y>14</y><width>500</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #e2e8f0; font-size: 16px; font-weight: bold; background: transparent; }</string></property>
+    <property name="text"><string>Course Title</string></property>
+   </widget>
+  </widget>
+
+  <!-- COURSE INFO CARD -->
+  <widget class="QFrame" name="info_card">
+   <property name="geometry"><rect><x>30</x><y>84</y><width>800</width><height>130</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">QFrame { background: #070b14; border: 1px solid #0f1629; border-radius: 14px; }</string>
+   </property>
+   <property name="frameShape"><enum>QFrame::Shape::StyledPanel</enum></property>
+
+   <widget class="QLabel" name="label_lang_badge">
+    <property name="geometry"><rect><x>20</x><y>20</y><width>60</width><height>60</height></rect></property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: #0d1f5c; border-radius: 12px; border: 1px solid #1a3a99; color: #93c5fd; font-size: 13px; font-weight: bold; }</string>
+    </property>
+    <property name="text"><string>C++</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+
+   <widget class="QLabel" name="label_title_card">
+    <property name="geometry"><rect><x>96</x><y>16</y><width>500</width><height>28</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #e2e8f0; font-size: 18px; font-weight: bold; background: transparent; }</string></property>
+    <property name="text"><string>Course Title</string></property>
+   </widget>
+
+   <widget class="QLabel" name="label_difficulty_badge">
+    <property name="geometry"><rect><x>96</x><y>48</y><width>100</width><height>22</height></rect></property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #22c55e; border: 1px solid #22c55e; border-radius: 11px; font-size: 11px; font-weight: bold; background: transparent; padding: 0 8px; }</string>
+    </property>
+    <property name="text"><string>Beginner</string></property>
+   </widget>
+
+   <widget class="QLabel" name="label_description">
+    <property name="geometry"><rect><x>96</x><y>76</y><width>680</width><height>40</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #334155; font-size: 13px; background: transparent; }</string></property>
+    <property name="text"><string>Course description goes here.</string></property>
+    <property name="wordWrap"><bool>true</bool></property>
+   </widget>
+  </widget>
+
+  <!-- STATS ROW -->
+  <widget class="QFrame" name="stat_lessons">
+   <property name="geometry"><rect><x>30</x><y>234</y><width>190</width><height>80</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame { background: #070b14; border: 1px solid #0f1629; border-radius: 10px; }</string></property>
+   <widget class="QLabel" name="label_lessons_val">
+    <property name="geometry"><rect><x>0</x><y>12</y><width>190</width><height>30</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #3b82f6; font-size: 24px; font-weight: bold; background: transparent; }</string></property>
+    <property name="text"><string>8</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+   <widget class="QLabel" name="label_lessons_lbl">
+    <property name="geometry"><rect><x>0</x><y>46</y><width>190</width><height>18</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #1e3a5f; font-size: 11px; background: transparent; }</string></property>
+    <property name="text"><string>Lessons</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+  </widget>
+
+  <widget class="QFrame" name="stat_xp">
+   <property name="geometry"><rect><x>236</x><y>234</y><width>190</width><height>80</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame { background: #070b14; border: 1px solid #0f1629; border-radius: 10px; }</string></property>
+   <widget class="QLabel" name="label_xp_val">
+    <property name="geometry"><rect><x>0</x><y>12</y><width>190</width><height>30</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #f59e0b; font-size: 24px; font-weight: bold; background: transparent; }</string></property>
+    <property name="text"><string>+150 XP</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+   <widget class="QLabel" name="label_xp_lbl">
+    <property name="geometry"><rect><x>0</x><y>46</y><width>190</width><height>18</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #1e3a5f; font-size: 11px; background: transparent; }</string></property>
+    <property name="text"><string>XP on completion</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+  </widget>
+
+  <widget class="QFrame" name="stat_difficulty">
+   <property name="geometry"><rect><x>442</x><y>234</y><width>190</width><height>80</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame { background: #070b14; border: 1px solid #0f1629; border-radius: 10px; }</string></property>
+   <widget class="QLabel" name="label_diff_val">
+    <property name="geometry"><rect><x>0</x><y>12</y><width>190</width><height>30</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #22c55e; font-size: 18px; font-weight: bold; background: transparent; }</string></property>
+    <property name="text"><string>Beginner</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+   <widget class="QLabel" name="label_diff_lbl">
+    <property name="geometry"><rect><x>0</x><y>46</y><width>190</width><height>18</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #1e3a5f; font-size: 11px; background: transparent; }</string></property>
+    <property name="text"><string>Difficulty level</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+  </widget>
+
+  <widget class="QFrame" name="stat_lang">
+   <property name="geometry"><rect><x>648</x><y>234</y><width>182</width><height>80</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame { background: #070b14; border: 1px solid #0f1629; border-radius: 10px; }</string></property>
+   <widget class="QLabel" name="label_lang_val">
+    <property name="geometry"><rect><x>0</x><y>12</y><width>182</width><height>30</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #a855f7; font-size: 18px; font-weight: bold; background: transparent; }</string></property>
+    <property name="text"><string>C++</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+   <widget class="QLabel" name="label_lang_lbl">
+    <property name="geometry"><rect><x>0</x><y>46</y><width>182</width><height>18</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #1e3a5f; font-size: 11px; background: transparent; }</string></property>
+    <property name="text"><string>Language</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+   </widget>
+  </widget>
+
+  <!-- WHAT YOU WILL LEARN section -->
+  <widget class="QLabel" name="label_section">
+   <property name="geometry"><rect><x>30</x><y>334</y><width>800</width><height>16</height></rect></property>
+   <property name="styleSheet"><string notr="true">QLabel { color: #334155; font-size: 10px; font-weight: bold; letter-spacing: 1px; background: transparent; }</string></property>
+   <property name="text"><string>WHAT YOU WILL LEARN</string></property>
+  </widget>
+
+  <widget class="QFrame" name="learn_card">
+   <property name="geometry"><rect><x>30</x><y>358</y><width>800</width><height>100</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">QFrame { background: #070b14; border: 1px solid #0f1629; border-radius: 12px; }</string>
+   </property>
+   <widget class="QLabel" name="label_learn_content">
+    <property name="geometry"><rect><x>20</x><y>14</y><width>760</width><height>72</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #546e7a; font-size: 13px; background: transparent; line-height: 1.6; }</string></property>
+    <property name="text"><string>Loading course content...</string></property>
+    <property name="wordWrap"><bool>true</bool></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignTop|Qt::AlignmentFlag::AlignLeft</set></property>
+   </widget>
+  </widget>
+
+  <!-- START QUIZ BUTTON -->
+  <widget class="QPushButton" name="pushButton_startQuiz">
+   <property name="geometry"><rect><x>30</x><y>476</y><width>800</width><height>52</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton {
+    background: #1d4ed8; color: #eff6ff;
+    border: none; border-radius: 10px;
+    font-size: 16px; font-weight: bold; letter-spacing: 1px;
+}
+QPushButton:hover { background: #2563eb; }
+QPushButton:pressed { background: #1e40af; }
+    </string>
+   </property>
+   <property name="text"><string>Take the Quiz →</string></property>
+  </widget>
+
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

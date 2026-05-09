@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>quizselectwindow</class>
+ <widget class="QWidget" name="quizselectwindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1000</width><height>680</height></rect>
+  </property>
+  <property name="windowTitle"><string>Langora — Select Quiz</string></property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#quizselectwindow { background-color: #050810; }</string>
+  </property>
+  <!-- TOP BAR -->
+  <widget class="QFrame" name="topbar">
+   <property name="geometry"><rect><x>0</x><y>0</y><width>1000</width><height>64</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame#topbar { background-color: #070b14; border-bottom: 1px solid #0f1629; }</string></property>
+   <property name="frameShape"><enum>QFrame::Shape::StyledPanel</enum></property>
+   <widget class="QPushButton" name="pushButton_back">
+    <property name="geometry"><rect><x>20</x><y>14</y><width>100</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QPushButton{background:transparent;color:#3b82f6;border:1px solid #1e3a5f;border-radius:8px;font-size:13px;font-weight:bold;}QPushButton:hover{background:#070f24;border-color:#1d4ed8;}</string></property>
+    <property name="text"><string>← Back</string></property>
+   </widget>
+   <widget class="QLabel" name="label_title">
+    <property name="geometry"><rect><x>140</x><y>14</y><width>500</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel{color:#e2e8f0;font-size:18px;font-weight:bold;background:transparent;}</string></property>
+    <property name="text"><string>Select a Quiz</string></property>
+   </widget>
+   <widget class="QLabel" name="label_subtitle">
+    <property name="geometry"><rect><x>700</x><y>14</y><width>280</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel{color:#334155;font-size:12px;background:transparent;}</string></property>
+    <property name="text"><string>Choose a course to quiz yourself on</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignVCenter</set></property>
+   </widget>
+  </widget>
+  <!-- SCROLL AREA -->
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry"><rect><x>0</x><y>64</y><width>1000</width><height>616</height></rect></property>
+   <property name="styleSheet"><string notr="true">QScrollArea{background:#050810;border:none;}QScrollBar:vertical{background:#070b14;width:6px;border-radius:3px;}QScrollBar::handle:vertical{background:#0f1629;border-radius:3px;min-height:20px;}QScrollBar::handle:vertical:hover{background:#1d4ed8;}QScrollBar::add-line:vertical,QScrollBar::sub-line:vertical{height:0px;}</string></property>
+   <property name="widgetResizable"><bool>true</bool></property>
+   <property name="frameShape"><enum>QFrame::Shape::NoFrame</enum></property>
+   <widget class="QWidget" name="scrollContents">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>998</width><height>614</height></rect></property>
+    <property name="styleSheet"><string notr="true">QWidget{background:#050810;}</string></property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

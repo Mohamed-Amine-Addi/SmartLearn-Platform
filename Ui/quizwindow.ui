@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>quizwindow</class>
+ <widget class="QWidget" name="quizwindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>860</width><height>620</height></rect>
+  </property>
+  <property name="windowTitle"><string>Langora — Quiz</string></property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#quizwindow { background-color: #050810; }</string>
+  </property>
+
+  <!-- TOP BAR -->
+  <widget class="QFrame" name="topbar">
+   <property name="geometry"><rect><x>0</x><y>0</y><width>860</width><height>64</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#topbar { background-color: #070b14; border-bottom: 1px solid #0f1629; }</string>
+   </property>
+   <property name="frameShape"><enum>QFrame::Shape::StyledPanel</enum></property>
+
+   <widget class="QPushButton" name="pushButton_back">
+    <property name="geometry"><rect><x>20</x><y>14</y><width>90</width><height>36</height></rect></property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton { background: transparent; color: #3b82f6; border: 1px solid #1e3a5f; border-radius: 8px; font-size: 13px; font-weight: bold; }
+QPushButton:hover { background: #070f24; border-color: #1d4ed8; }
+     </string>
+    </property>
+    <property name="text"><string>← Exit</string></property>
+   </widget>
+
+   <widget class="QLabel" name="label_course_title">
+    <property name="geometry"><rect><x>130</x><y>14</y><width>400</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #e2e8f0; font-size: 15px; font-weight: bold; background: transparent; }</string></property>
+    <property name="text"><string>Quiz</string></property>
+   </widget>
+
+   <widget class="QLabel" name="label_progress">
+    <property name="geometry"><rect><x>680</x><y>14</y><width>160</width><height>36</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #334155; font-size: 13px; background: transparent; }</string></property>
+    <property name="text"><string>Question 1 / 5</string></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignVCenter</set></property>
+   </widget>
+  </widget>
+
+  <!-- PROGRESS BAR -->
+  <widget class="QFrame" name="progress_bg">
+   <property name="geometry"><rect><x>0</x><y>64</y><width>860</width><height>4</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame { background: #0f1629; border: none; }</string></property>
+  </widget>
+  <widget class="QFrame" name="progress_fill">
+   <property name="geometry"><rect><x>0</x><y>64</y><width>172</width><height>4</height></rect></property>
+   <property name="styleSheet"><string notr="true">QFrame { background: #1d4ed8; border: none; }</string></property>
+  </widget>
+
+  <!-- QUESTION CARD -->
+  <widget class="QFrame" name="question_card">
+   <property name="geometry"><rect><x>60</x><y>90</y><width>740</width><height>140</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">QFrame { background: #070b14; border: 1px solid #0f1629; border-radius: 14px; }</string>
+   </property>
+   <property name="frameShape"><enum>QFrame::Shape::StyledPanel</enum></property>
+
+   <widget class="QLabel" name="label_question_num">
+    <property name="geometry"><rect><x>20</x><y>16</y><width>700</width><height>16</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #1d4ed8; font-size: 11px; font-weight: bold; letter-spacing: 1px; background: transparent; }</string></property>
+    <property name="text"><string>QUESTION 1</string></property>
+   </widget>
+
+   <widget class="QLabel" name="label_question_text">
+    <property name="geometry"><rect><x>20</x><y>38</y><width>700</width><height>86</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #e2e8f0; font-size: 16px; font-weight: bold; background: transparent; }</string></property>
+    <property name="text"><string>Question text goes here</string></property>
+    <property name="wordWrap"><bool>true</bool></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set></property>
+   </widget>
+  </widget>
+
+  <!-- OPTIONS — 4 radio buttons styled as cards -->
+  <widget class="QRadioButton" name="radio_0">
+   <property name="geometry"><rect><x>60</x><y>246</y><width>740</width><height>52</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">
+QRadioButton {
+    color: #cbd5e1; font-size: 14px; background: #070b14;
+    border: 1px solid #0f1629; border-radius: 10px; padding: 0 16px;
+}
+QRadioButton:hover { border-color: #1d4ed8; background: #080d18; }
+QRadioButton:checked { border-color: #1d4ed8; background: #0a1428; color: #60a5fa; font-weight: bold; }
+QRadioButton::indicator { width: 16px; height: 16px; }
+    </string>
+   </property>
+   <property name="text"><string>Option A</string></property>
+  </widget>
+
+  <widget class="QRadioButton" name="radio_1">
+   <property name="geometry"><rect><x>60</x><y>306</y><width>740</width><height>52</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">
+QRadioButton {
+    color: #cbd5e1; font-size: 14px; background: #070b14;
+    border: 1px solid #0f1629; border-radius: 10px; padding: 0 16px;
+}
+QRadioButton:hover { border-color: #1d4ed8; background: #080d18; }
+QRadioButton:checked { border-color: #1d4ed8; background: #0a1428; color: #60a5fa; font-weight: bold; }
+QRadioButton::indicator { width: 16px; height: 16px; }
+    </string>
+   </property>
+   <property name="text"><string>Option B</string></property>
+  </widget>
+
+  <widget class="QRadioButton" name="radio_2">
+   <property name="geometry"><rect><x>60</x><y>366</y><width>740</width><height>52</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">
+QRadioButton {
+    color: #cbd5e1; font-size: 14px; background: #070b14;
+    border: 1px solid #0f1629; border-radius: 10px; padding: 0 16px;
+}
+QRadioButton:hover { border-color: #1d4ed8; background: #080d18; }
+QRadioButton:checked { border-color: #1d4ed8; background: #0a1428; color: #60a5fa; font-weight: bold; }
+QRadioButton::indicator { width: 16px; height: 16px; }
+    </string>
+   </property>
+   <property name="text"><string>Option C</string></property>
+  </widget>
+
+  <widget class="QRadioButton" name="radio_3">
+   <property name="geometry"><rect><x>60</x><y>426</y><width>740</width><height>52</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">
+QRadioButton {
+    color: #cbd5e1; font-size: 14px; background: #070b14;
+    border: 1px solid #0f1629; border-radius: 10px; padding: 0 16px;
+}
+QRadioButton:hover { border-color: #1d4ed8; background: #080d18; }
+QRadioButton:checked { border-color: #1d4ed8; background: #0a1428; color: #60a5fa; font-weight: bold; }
+QRadioButton::indicator { width: 16px; height: 16px; }
+    </string>
+   </property>
+   <property name="text"><string>Option D</string></property>
+  </widget>
+
+  <!-- FILL IN BLANK input (shown only for FillBlank questions) -->
+  <widget class="QLineEdit" name="lineEdit_answer">
+   <property name="geometry"><rect><x>60</x><y>246</y><width>740</width><height>52</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">
+QLineEdit {
+    background: #070b14; border: 1px solid #0f1629;
+    border-radius: 10px; padding: 0 16px;
+    color: #e2e8f0; font-size: 14px;
+}
+QLineEdit:focus { border-color: #1d4ed8; }
+    </string>
+   </property>
+   <property name="placeholderText"><string>Type your answer here...</string></property>
+  </widget>
+
+  <!-- FEEDBACK box -->
+  <widget class="QFrame" name="feedback_box">
+   <property name="geometry"><rect><x>60</x><y>490</y><width>740</width><height>60</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">QFrame { background: #0a1428; border: 1px solid #1d4ed8; border-radius: 10px; }</string>
+   </property>
+   <property name="frameShape"><enum>QFrame::Shape::StyledPanel</enum></property>
+   <widget class="QLabel" name="label_feedback">
+    <property name="geometry"><rect><x>16</x><y>0</y><width>708</width><height>60</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { color: #60a5fa; font-size: 13px; background: transparent; }</string></property>
+    <property name="text"><string>Feedback appears here after answering</string></property>
+    <property name="wordWrap"><bool>true</bool></property>
+    <property name="alignment"><set>Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set></property>
+   </widget>
+  </widget>
+
+  <!-- SUBMIT / NEXT button -->
+  <widget class="QPushButton" name="pushButton_submit">
+   <property name="geometry"><rect><x>60</x><y>562</y><width>740</width><height>48</height></rect></property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton {
+    background: #1d4ed8; color: #eff6ff;
+    border: none; border-radius: 10px;
+    font-size: 15px; font-weight: bold;
+}
+QPushButton:hover { background: #2563eb; }
+QPushButton:pressed { background: #1e40af; }
+    </string>
+   </property>
+   <property name="text"><string>Submit Answer</string></property>
+  </widget>
+
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>registerwindow</class>
+ <widget class="QWidget" name="registerwindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>900</width><height>750</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Langora — Create Account</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget#registerwindow {
+    background-color: #080c12;
+}
+   </string>
+  </property>
+
+  <!-- LEFT PANEL — branding side -->
+  <widget class="QFrame" name="panel_left">
+   <property name="geometry">
+    <rect><x>0</x><y>0</y><width>300</width><height>750</height></rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QFrame#panel_left {
+    background-color: #0d1117;
+    border-right: 1px solid #21262d;
+}
+    </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+
+   <!-- Logo image -->
+   <widget class="QLabel" name="label_logo">
+    <property name="geometry">
+     <rect><x>90</x><y>180</y><width>120</width><height>120</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    background: transparent;
+    border-radius: 24px;
+}
+     </string>
+    </property>
+    <property name="text"><string/></property>
+    <property name="pixmap"><pixmap>logo.png</pixmap></property>
+    <property name="scaledContents"><bool>true</bool></property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+
+   <!-- App name -->
+   <widget class="QLabel" name="label_appname">
+    <property name="geometry">
+     <rect><x>20</x><y>320</y><width>260</width><height>40</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    color: #e8eaf6;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    background: transparent;
+}
+     </string>
+    </property>
+    <property name="text"><string>LANGORA</string></property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+
+   <!-- Tagline -->
+   <widget class="QLabel" name="label_tagline">
+    <property name="geometry">
+     <rect><x>20</x><y>366</y><width>260</width><height>20</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    color: #546e7a;
+    font-size: 11px;
+    letter-spacing: 2px;
+    background: transparent;
+}
+     </string>
+    </property>
+    <property name="text"><string>LEARN · QUIZ · PROGRESS</string></property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+
+   <!-- Divider line -->
+   <widget class="QFrame" name="line_divider">
+    <property name="geometry">
+     <rect><x>60</x><y>410</y><width>180</width><height>1</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame { background-color: #21262d; }</string>
+    </property>
+   </widget>
+
+   <!-- Feature 1 -->
+   <widget class="QLabel" name="label_feat1">
+    <property name="geometry">
+     <rect><x>30</x><y>430</y><width>240</width><height>16</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #90caf9; font-size: 12px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>▸  Interactive programming courses</string></property>
+   </widget>
+
+   <!-- Feature 2 -->
+   <widget class="QLabel" name="label_feat2">
+    <property name="geometry">
+     <rect><x>30</x><y>456</y><width>240</width><height>16</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #90caf9; font-size: 12px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>▸  Quizzes with XP rewards</string></property>
+   </widget>
+
+   <!-- Feature 3 -->
+   <widget class="QLabel" name="label_feat3">
+    <property name="geometry">
+     <rect><x>30</x><y>482</y><width>240</width><height>16</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #90caf9; font-size: 12px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>▸  Track your progress and badges</string></property>
+   </widget>
+
+   <!-- Feature 4 -->
+   <widget class="QLabel" name="label_feat4">
+    <property name="geometry">
+     <rect><x>30</x><y>508</y><width>240</width><height>16</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #90caf9; font-size: 12px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>▸  Daily streak system</string></property>
+   </widget>
+
+  </widget>
+
+  <!-- RIGHT PANEL — form side -->
+  <widget class="QFrame" name="panel_right">
+   <property name="geometry">
+    <rect><x>300</x><y>0</y><width>600</width><height>750</height></rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QFrame#panel_right {
+    background-color: #080c12;
+}
+    </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+
+   <!-- Title -->
+   <widget class="QLabel" name="label_title">
+    <property name="geometry">
+     <rect><x>50</x><y>50</y><width>500</width><height>36</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    color: #e8eaf6;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: transparent;
+}
+     </string>
+    </property>
+    <property name="text"><string>Create your account</string></property>
+   </widget>
+
+   <!-- Subtitle -->
+   <widget class="QLabel" name="label_sub">
+    <property name="geometry">
+     <rect><x>50</x><y>88</y><width>500</width><height>18</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #546e7a; font-size: 12px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>Fill in your details to get started for free</string></property>
+   </widget>
+
+   <!-- Step indicator -->
+   <widget class="QLabel" name="label_step">
+    <property name="geometry">
+     <rect><x>50</x><y>114</y><width>500</width><height>14</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #1976d2; font-size: 11px; font-weight: bold; background: transparent; }</string>
+    </property>
+    <property name="text"><string>STEP 1 OF 1 — PERSONAL DETAILS</string></property>
+   </widget>
+
+   <!-- Thin accent line -->
+   <widget class="QFrame" name="line_accent">
+    <property name="geometry">
+     <rect><x>50</x><y>135</y><width>500</width><height>2</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame { background-color: #1565c0; border-radius: 1px; }</string>
+    </property>
+   </widget>
+
+   <!-- FIRST NAME label -->
+   <widget class="QLabel" name="label_fn">
+    <property name="geometry">
+     <rect><x>50</x><y>152</y><width>220</width><height>14</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #78909c; font-size: 10px; font-weight: bold; letter-spacing: 1px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>FIRST NAME</string></property>
+   </widget>
+
+   <!-- FIRST NAME input -->
+   <widget class="QLineEdit" name="lineEdit_firstName">
+    <property name="geometry">
+     <rect><x>50</x><y>170</y><width>220</width><height>42</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLineEdit {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    padding: 0 14px;
+    color: #e6edf3;
+    font-size: 13px;
+}
+QLineEdit:focus { border: 1px solid #1976d2; }
+     </string>
+    </property>
+    <property name="placeholderText"><string>e.g. Ahmed</string></property>
+   </widget>
+
+   <!-- LAST NAME label -->
+   <widget class="QLabel" name="label_ln">
+    <property name="geometry">
+     <rect><x>290</x><y>152</y><width>260</width><height>14</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #78909c; font-size: 10px; font-weight: bold; letter-spacing: 1px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>LAST NAME</string></property>
+   </widget>
+
+   <!-- LAST NAME input -->
+   <widget class="QLineEdit" name="lineEdit_lastName">
+    <property name="geometry">
+     <rect><x>290</x><y>170</y><width>260</width><height>42</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLineEdit {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    padding: 0 14px;
+    color: #e6edf3;
+    font-size: 13px;
+}
+QLineEdit:focus { border: 1px solid #1976d2; }
+     </string>
+    </property>
+    <property name="placeholderText"><string>e.g. Benali</string></property>
+   </widget>
+
+   <!-- USERNAME label -->
+   <widget class="QLabel" name="label_un">
+    <property name="geometry">
+     <rect><x>50</x><y>228</y><width>500</width><height>14</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #78909c; font-size: 10px; font-weight: bold; letter-spacing: 1px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>USERNAME</string></property>
+   </widget>
+
+   <!-- USERNAME input -->
+   <widget class="QLineEdit" name="lineEdit_username">
+    <property name="geometry">
+     <rect><x>50</x><y>246</y><width>500</width><height>42</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLineEdit {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    padding: 0 14px;
+    color: #e6edf3;
+    font-size: 13px;
+}
+QLineEdit:focus { border: 1px solid #1976d2; }
+     </string>
+    </property>
+    <property name="placeholderText"><string>Letters, numbers and underscores only</string></property>
+   </widget>
+
+   <!-- EMAIL label -->
+   <widget class="QLabel" name="label_em">
+    <property name="geometry">
+     <rect><x>50</x><y>304</y><width>500</width><height>14</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #78909c; font-size: 10px; font-weight: bold; letter-spacing: 1px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>EMAIL ADDRESS</string></property>
+   </widget>
+
+   <!-- EMAIL input -->
+   <widget class="QLineEdit" name="lineEdit_email">
+    <property name="geometry">
+     <rect><x>50</x><y>322</y><width>500</width><height>42</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLineEdit {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    padding: 0 14px;
+    color: #e6edf3;
+    font-size: 13px;
+}
+QLineEdit:focus { border: 1px solid #1976d2; }
+     </string>
+    </property>
+    <property name="placeholderText"><string>you@example.com</string></property>
+   </widget>
+
+   <!-- PASSWORD label -->
+   <widget class="QLabel" name="label_pw">
+    <property name="geometry">
+     <rect><x>50</x><y>380</y><width>500</width><height>14</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #78909c; font-size: 10px; font-weight: bold; letter-spacing: 1px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>PASSWORD</string></property>
+   </widget>
+
+   <!-- PASSWORD input -->
+   <widget class="QLineEdit" name="lineEdit_password">
+    <property name="geometry">
+     <rect><x>50</x><y>398</y><width>500</width><height>42</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLineEdit {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    padding: 0 14px;
+    color: #e6edf3;
+    font-size: 13px;
+}
+QLineEdit:focus { border: 1px solid #1976d2; }
+     </string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
+    </property>
+    <property name="placeholderText"><string>Minimum 6 characters</string></property>
+   </widget>
+
+   <!-- Strength bars -->
+   <widget class="QFrame" name="frame_bar1">
+    <property name="geometry"><rect><x>50</x><y>446</y><width>116</width><height>4</height></rect></property>
+    <property name="styleSheet"><string notr="true">QFrame { background: #21262d; border-radius: 2px; }</string></property>
+   </widget>
+   <widget class="QFrame" name="frame_bar2">
+    <property name="geometry"><rect><x>172</x><y>446</y><width>116</width><height>4</height></rect></property>
+    <property name="styleSheet"><string notr="true">QFrame { background: #21262d; border-radius: 2px; }</string></property>
+   </widget>
+   <widget class="QFrame" name="frame_bar3">
+    <property name="geometry"><rect><x>294</x><y>446</y><width>116</width><height>4</height></rect></property>
+    <property name="styleSheet"><string notr="true">QFrame { background: #21262d; border-radius: 2px; }</string></property>
+   </widget>
+   <widget class="QFrame" name="frame_bar4">
+    <property name="geometry"><rect><x>416</x><y>446</y><width>134</width><height>4</height></rect></property>
+    <property name="styleSheet"><string notr="true">QFrame { background: #21262d; border-radius: 2px; }</string></property>
+   </widget>
+
+   <!-- Strength text -->
+   <widget class="QLabel" name="label_strength">
+    <property name="geometry"><rect><x>50</x><y>455</y><width>500</width><height>14</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { font-size: 11px; background: transparent; }</string></property>
+    <property name="text"><string/></property>
+   </widget>
+
+   <!-- CONFIRM PASSWORD label -->
+   <widget class="QLabel" name="label_cp">
+    <property name="geometry">
+     <rect><x>50</x><y>478</y><width>500</width><height>14</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { color: #78909c; font-size: 10px; font-weight: bold; letter-spacing: 1px; background: transparent; }</string>
+    </property>
+    <property name="text"><string>CONFIRM PASSWORD</string></property>
+   </widget>
+
+   <!-- CONFIRM PASSWORD input -->
+   <widget class="QLineEdit" name="lineEdit_confirmPassword">
+    <property name="geometry">
+     <rect><x>50</x><y>496</y><width>500</width><height>42</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLineEdit {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    padding: 0 14px;
+    color: #e6edf3;
+    font-size: 13px;
+}
+QLineEdit:focus { border: 1px solid #1976d2; }
+     </string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
+    </property>
+    <property name="placeholderText"><string>Repeat your password</string></property>
+   </widget>
+
+   <!-- Match label -->
+   <widget class="QLabel" name="label_confirmMatch">
+    <property name="geometry"><rect><x>50</x><y>542</y><width>500</width><height>14</height></rect></property>
+    <property name="styleSheet"><string notr="true">QLabel { background: transparent; font-size: 11px; }</string></property>
+    <property name="text"><string/></property>
+   </widget>
+
+   <!-- CREATE ACCOUNT button -->
+   <widget class="QPushButton" name="pushButton_register">
+    <property name="geometry">
+     <rect><x>50</x><y>566</y><width>500</width><height>48</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background: #1565c0;
+    color: #e8f4fd;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+QPushButton:hover { background: #1976d2; }
+QPushButton:pressed { background: #0d47a1; }
+     </string>
+    </property>
+    <property name="text"><string>Create My Account</string></property>
+   </widget>
+
+   <!-- BACK button -->
+   <widget class="QPushButton" name="pushButton_back">
+    <property name="geometry">
+     <rect><x>50</x><y>626</y><width>500</width><height>42</height></rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background: transparent;
+    color: #546e7a;
+    border: 1px solid #21262d;
+    border-radius: 10px;
+    font-size: 12px;
+}
+QPushButton:hover {
+    color: #90caf9;
+    border-color: #1565c0;
+    background: #0d1a2d;
+}
+     </string>
+    </property>
+    <property name="text"><string>Already have an account?  Sign In →</string></property>
+   </widget>
+
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
